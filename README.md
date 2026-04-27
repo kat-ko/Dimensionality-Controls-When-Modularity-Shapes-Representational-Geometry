@@ -13,11 +13,8 @@ The paper tests how network structure and task similarity affect:
 
 The included pipeline reproduces the main figure set from the paper after local training.
 
-## Repository map
-
 - `a1b2_modular/`: experiment code, scripts, and participant inputs
 - `overleaf/`: paper source (`main.tex`, bibliography, expected figure files)
-- `CLEANUP_MANIFEST.md`: keep/remove policy for this lean release
 
 ## Quickstart
 
@@ -36,13 +33,9 @@ pip install -e a1b2_modular
 python a1b2_modular/scripts/01_preprocess_data.py
 ```
 
-Expected output:
-
-- `a1b2_modular/data/participants/trial_df.csv`
-
 ### 3) Run the paper experiment matrix
 
-Run each condition below:
+To reproduce paper figures run each condition below:
 
 ```bash
 python a1b2_modular/scripts/02_run_simulations.py <condition> --base-folder a1b2_modular
@@ -67,7 +60,7 @@ Conditions:
 python a1b2_modular/scripts/03_fit_vonmises.py simulations --base-folder a1b2_modular --sim-name <run_id>
 ```
 
-Optional (participant-side fits):
+To compute interference (participant-side fits):
 
 ```bash
 python a1b2_modular/scripts/03_fit_vonmises.py participants --base-folder a1b2_modular
@@ -78,17 +71,6 @@ python a1b2_modular/scripts/03_fit_vonmises.py participants --base-folder a1b2_m
 Run:
 
 - `a1b2_modular/notebooks/paper_figures_size25.ipynb`
-
-Expected figure outputs:
-
-- `overleaf/figures/overview.png`
-- `overleaf/figures/accuperf.png`
-- `overleaf/figures/reduceddim.png`
-- `overleaf/figures/reprgeomtry.png`
-
-### 6) Compile manuscript
-
-Compile `overleaf/main.tex` after the figure files exist.
 
 ## Reproducibility note
 
