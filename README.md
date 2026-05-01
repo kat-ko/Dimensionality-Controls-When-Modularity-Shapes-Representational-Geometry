@@ -1,12 +1,11 @@
 
 
 This repository is a focused reproducibility package for the paper "When Does Structure Matter in Continual Learning? Dimensionality Controls When Modularity Shapes Representational Geometry" (https://arxiv.org/abs/2604.27656).
-It contains the exact experiment subset used for the main paper comparison:
-modular recurrent networks versus a matched non-modular baseline.
+It contains the exact experiment subset used for the main paper comparison: modular recurrent networks versus a matched non-modular baseline.
 
 ## What this paper studies
 
-The paper tests how network structure and task similarity affect:
+The paper tests how network structure, learning regime (representational dimensionality) and task similarity affect representational alignment and thereby:
 
 - transfer to a new task, and
 - interference with a previously learned task.
@@ -14,7 +13,6 @@ The paper tests how network structure and task similarity affect:
 The included pipeline reproduces the main figure set from the paper after local training.
 
 - `a1b2_modular/`: experiment code, scripts, and participant inputs
-- `overleaf/`: paper source (`main.tex`, bibliography, expected figure files)
 
 ## Quickstart
 
